@@ -531,7 +531,7 @@ p{
 }
 .coop-sliver p{
     color: #4A4D4D;
-    max-width: 461px;
+    max-width: 361px;
     width: 100%;
 }
 .coop-sliver .cooperation-arrow{
@@ -737,6 +737,9 @@ p{
     line-height: 26px;
     text-align: left;
 }
+.map-contact-name br{
+    display: none;
+}
 .map-contact .btn{
     margin-top: 40px;
 }
@@ -870,6 +873,12 @@ p{
         padding: 24px 12px 24px 20px;
         max-width: 166px;
     }
+    .wholesale-info {
+        max-width: 460px;
+    }
+    .leaders-trust-title p {
+        max-width: 270px;
+    }
     .btn {
         padding: 16px 20px;
     }
@@ -923,7 +932,9 @@ p{
     .leaders-card {
         height: 240px;
     }
-
+    .coop-blue p {
+        max-width: 351px;
+    }
 }
 
 @media (max-width: 1020px){
@@ -1250,6 +1261,9 @@ p{
         width: max-content;
 
     }
+    .coop-primary p{
+        max-width: 186px;
+    }
 
     .price-see-none{
         display: none;
@@ -1282,6 +1296,9 @@ p{
         line-height: 36px;
         text-align: center;
     }
+    .map-contact-name br{
+        display: block;
+    }
 }
 @media (max-width: 420px){
     .leaders-card {
@@ -1290,7 +1307,9 @@ p{
     .deliveries-column {
         margin-top: -185px;
     }
-
+    .deliveries-images {
+        max-width: 367px;
+    }
 }
 @media (max-width: 390px){
     .deliveries-images {
