@@ -24,7 +24,8 @@
                     <i class="icon-call"></i>
                     <span>+7 (383) 288-88-15</span>
                 </a>
-                <button class="request-call G-flex">Заказать звонок</button>
+                <button data-val="modal" class="open_modal request-call G-flex">Заказать звонок</button>
+
             </div>
 
             <div class="open-menu">
@@ -45,13 +46,12 @@
                 <span>+7 (383) 288-88-15</span>
             </a>
             <ul class="menu-scroll G-flex-column G-align-start">
-                <li><a href="index.html#price">Прайс</a></li>
-                <li><a href="index.html#cooperation">Сотрудничество</a></li>
-                <li><a href="index.html#partners">Партнёры</a></li>
-                <li><a href="index.html#contact">Контакты</a></li>
-                <li><a href="#">Реквизиты компании</a></li>
+                <li><a href="./price-list.html">Прайс</a></li>
+                <li><a href="./help.html">Помощь</a></li>
+                <li><a href="./index.html#contact">Контакты</a></li>
+                <li><a href="./requisites.html">Реквизиты компании</a></li>
             </ul>
-            <button class="request-call G-flex">Заказать звонок</button>
+            <button data-val="modal" class="open_modal request-call G-flex">Заказать звонок</button>
         </div>
     </div>
 </header>
@@ -183,11 +183,10 @@
             <div class="footer-info G-align-start G-justify-between">
                 <div class="footer-menu">
                     <ul class="menu-scroll G-flex-column G-align-start">
-                        <li><a href="index.html#price">Прайс</a></li>
-                        <li><a href="index.html#cooperation">Сотрудничество</a></li>
-                        <li><a href="index.html#partners">Партнёры</a></li>
-                        <li><a href="index.html#contact">Контакты</a></li>
-                        <li><a href="#">Реквизиты компании</a></li>
+                        <li><a href="./price-list.html">Прайс</a></li>
+                        <li><a href="./help.html">Помощь</a></li>
+                        <li><a href="./index.html#contact">Контакты</a></li>
+                        <li><a href="./requisites.html">Реквизиты компании</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact-mob G-align-end G-flex-column">
@@ -203,7 +202,7 @@
         </div>
         <div class="privacy-policy-info G-justify-between G-align-end">
             <div class="privacy-policy G-flex-column G-align-start">
-                <a href="#">Политика конфиденциальности</a>
+                <a href="./policy.html">Политика конфиденциальности</a>
                 <p>
                     Вся информация о товарах и ценах, предоставленная на сайте, носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса Российской Федерации. Окончательные условия сотрудничества закрепляются в договоре.
                 </p>
@@ -215,6 +214,42 @@
         </div>
     </div>
 </footer>
+
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-form">
+            <div class="close"></div>
+            <div class="G-flex-column G-align-center">
+                <h2>Заказать звонок</h2>
+                <p>Ответим на все вопросы и поможем заключить договор</p>
+            </div>
+            <form>
+                <div class="modal-form-cnt G-flex-column">
+                    <div class="form-input">
+                        <label>
+                            <input type="text" placeholder="Ваше имя">
+                        </label>
+                    </div>
+                    <div class="form-input">
+                        <label>
+                            <input type="text" placeholder="+ 7 999 999 99 99">
+                        </label>
+                    </div>
+                    <div class="input-checkbox">
+                        <label>
+                            <small>Я даю своё согласие на <a href="#">обработу персональных данных</a></small>
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-white">Оставить заявку</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
 
 <script src="assets/js/jquery-3.6.4.js"></script>
 <script src="assets/js/swiper-bundle.min.js"></script>

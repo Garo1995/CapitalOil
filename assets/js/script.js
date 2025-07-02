@@ -111,22 +111,22 @@ $(function () {
 
 $('.open_modal').on('click', function () {
     let attr = $(this).attr('data-val');
+
     let modal = $('#' + attr);
+
+    // 👇 ВСТАВЛЯЕМ ВОТ ЭТО:
+    const fromValue = document.querySelector('#select-from .select-text').textContent;
+    const toValue = document.querySelector('#select-to .select-text').textContent;
+    document.querySelector('#select-froms .select-text').textContent = fromValue;
+    document.querySelector('#select-tos .select-text').textContent = toValue;
+
+
     modal.removeClass('out');
     $('body').css({overflow: 'hidden'});
     modal.fadeIn();
 });
 
 $('.close').on('click', function () {
-    let prt = $(this).parents('.modal');
-    prt.addClass('out')
-    setTimeout(function () {
-        prt.fadeOut();
-    }, 100);
-    $('body').css({overflow: 'visible '})
-
-})
-$('.close-log').on('click', function () {
     let prt = $(this).parents('.modal');
     prt.addClass('out')
     setTimeout(function () {
