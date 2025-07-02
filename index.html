@@ -24,7 +24,8 @@
                     <i class="icon-call"></i>
                     <span>+7 (383) 288-88-15</span>
                 </a>
-                <button class="request-call G-flex">Заказать звонок</button>
+                <button data-val="modal" class="open_modal request-call G-flex">Заказать звонок</button>
+
             </div>
 
             <div class="open-menu">
@@ -49,9 +50,9 @@
                 <li><a href="#cooperation">Сотрудничество</a></li>
                 <li><a href="#partners">Партнёры</a></li>
                 <li><a href="#contact">Контакты</a></li>
-                <li><a href="#">Реквизиты компании</a></li>
+                <li><a href="./requisites.html">Реквизиты компании</a></li>
             </ul>
-            <button class="request-call G-flex">Заказать звонок</button>
+            <button data-val="modal" class="open_modal request-call G-flex">Заказать звонок</button>
         </div>
     </div>
 </header>
@@ -328,7 +329,7 @@
                             <div class="custom-option">Волгоград</div>
                         </div>
                     </div>
-                    <button class="btn">Получить спецпредложение</button>
+                    <button data-val="special-offer" class="open_modal btn">Получить спецпредложение</button>
                 </div>
             </div>
         </div>
@@ -341,13 +342,14 @@
             <div class="contract-info">
                 <h2>Экспресс-оформление договора</h2>
                 <p>10 минут — и ваша заявка в работе. Первая партия — в кратчайшие сроки</p>
-                <button class="btn">Заключить договор</button>
+                <button data-val="contract" class="open_modal btn">Заключить договор</button>
+
             </div>
             <div class="contract-photo G-flex">
                 <img src="./assets/img/contract.png" alt="contract">
             </div>
             <div class="contract-btn-mob">
-                <button class="btn">Заключить договор</button>
+                <button data-val="contract" class="open_modal btn">Заключить договор</button>
             </div>
         </div>
     </div>
@@ -437,7 +439,8 @@
             </p>
         </div>
         <div class="cooperation-cnt G-flex-wrap">
-            <a href="#" class="cooperation-box coop-primary">
+
+            <div data-val="contract" class="open_modal cooperation-box coop-primary">
                 <div class="cooperation-name">
                     <h3>Регистрация</h3>
                     <p>Быстрая регистрация за пару кликов</p>
@@ -455,8 +458,8 @@
                         </defs>
                     </svg>
                 </div>
-            </a>
-            <a href="#" class="cooperation-box coop-sliver">
+            </div>
+            <div data-val="contract" class="open_modal cooperation-box coop-sliver">
                 <div class="cooperation-name">
                     <h3>Подтверждение организации</h3>
                     <p>Подтвердите учётные данные вашей компании после регистрации</p>
@@ -474,8 +477,8 @@
                         </defs>
                     </svg>
                 </div>
-            </a>
-            <a href="#" class="cooperation-box coop-black">
+            </div>
+            <div data-val="contract" class="open_modal cooperation-box coop-black">
                 <div class="cooperation-name">
                     <h3>Заключение договора поставки</h3>
                     <p>Заполните форму и подтвердите покупку через личный кабинет</p>
@@ -493,8 +496,8 @@
                         </defs>
                     </svg>
                 </div>
-            </a>
-            <a href="#" class="cooperation-box coop-blue">
+            </div>
+            <a href="./help.html" class="cooperation-box coop-blue">
                 <div class="cooperation-name">
                     <h3>Раздел «Помощь»</h3>
                     <p>Формы договоров и подробные инструкции по пользованию сайтом</p>
@@ -606,7 +609,8 @@
                     <span>vimpioil@yandex.ru</span>
                 </a>
             </div>
-            <button class="btn">Заказать топливо</button>
+            <button data-val="order-fuel" class="open_modal btn">Заказать топливо</button>
+
         </div>
     </div>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
@@ -614,7 +618,7 @@
     <div id="map"></div>
 
     <div class="contact-btn-mobile">
-        <button class="btn">Заказать топливо</button>
+        <button data-val="order-fuel" class="open_modal btn">Заказать топливо</button>
 
     </div>
 </section>
@@ -639,7 +643,7 @@
                         <li><a href="#cooperation">Сотрудничество</a></li>
                         <li><a href="#partners">Партнёры</a></li>
                         <li><a href="#contact">Контакты</a></li>
-                        <li><a href="#">Реквизиты компании</a></li>
+                        <li><a href="./requisites.html">Реквизиты компании</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact-mob G-align-end G-flex-column">
@@ -655,7 +659,7 @@
         </div>
         <div class="privacy-policy-info G-justify-between G-align-end">
             <div class="privacy-policy G-flex-column G-align-start">
-                <a href="#">Политика конфиденциальности</a>
+                <a href="./policy.html">Политика конфиденциальности</a>
                 <p>
                     Вся информация о товарах и ценах, предоставленная на сайте, носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса Российской Федерации. Окончательные условия сотрудничества закрепляются в договоре.
                 </p>
@@ -668,8 +672,228 @@
     </div>
 </footer>
 
+
+
+
+
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-form">
+            <div class="close"></div>
+            <div class="G-flex-column G-align-center">
+                <h2>Заказать звонок</h2>
+                <p>Ответим на все вопросы и поможем заключить договор</p>
+            </div>
+            <form>
+                <div class="modal-form-cnt G-flex-column">
+                    <div class="form-input">
+                        <label>
+                            <input type="text" placeholder="Ваше имя">
+                        </label>
+                    </div>
+                    <div class="form-input">
+                        <label>
+                            <input type="text" placeholder="+ 7 999 999 99 99">
+                        </label>
+                    </div>
+                    <div class="input-checkbox">
+                        <label>
+                            <small>Я даю своё согласие на <a href="#">обработу персональных данных</a></small>
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-white">Оставить заявку</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div id="contract" class="modal">
+    <div class="modal-content">
+        <div class="modal-form">
+            <div class="close"></div>
+            <div class="G-flex-column G-align-center">
+                <h2>Заключить договор</h2>
+                <p>10 минут — и ваша заявка в работе</p>
+            </div>
+            <form>
+                <div class="modal-form-cnt G-flex-column">
+                    <div class="form-input">
+                        <label>
+                            <input type="text" placeholder="Ваше имя">
+                        </label>
+                    </div>
+                    <div class="form-input">
+                        <label>
+                            <input type="text" placeholder="Email">
+                        </label>
+                    </div>
+                    <div class="form-input">
+                        <label>
+                            <input type="text" placeholder="+ 7 999 999 99 99">
+                        </label>
+                    </div>
+                    <div class="input-checkbox">
+                        <label>
+                            <small>Я даю своё согласие на <a href="#">обработу персональных данных</a></small>
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-white">Оставить заявку</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<div id="order-fuel" class="modal">
+    <div class="modal-content">
+        <div class="modal-form">
+            <div class="close"></div>
+            <div class="G-flex-column G-align-center">
+                <h2>Заказать топливо</h2>
+                <p>10 минут — и ваша заявка в работе</p>
+            </div>
+            <form>
+                <div class="modal-form-cnt G-flex-column">
+                    <div class="form-input">
+                        <label>
+                            <input type="text" placeholder="Ваше имя">
+                        </label>
+                    </div>
+                    <div class="form-input">
+                        <label>
+                            <input type="text" placeholder="Email">
+                        </label>
+                    </div>
+                    <div class="form-input">
+                        <label>
+                            <input type="text" placeholder="+ 7 999 999 99 99">
+                        </label>
+                    </div>
+                    <div class="input-checkbox">
+                        <label>
+                            <small>Я даю своё согласие на <a href="#">обработу персональных данных</a></small>
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-white">Оставить заявку</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="special-offer" class="modal">
+    <div class="modal-content">
+        <div class="modal-form">
+            <div class="close"></div>
+            <div class="G-flex-column G-align-center">
+                <h2>Персональные условия</h2>
+                <p>Получите индивидуальные условия <br> для вашего бизнеса</p>
+            </div>
+            <form>
+                <div class="modal-form-cnt G-flex-column">
+
+                    <div class="special-offer-fl G-align-center">
+                        <div class="form-group">
+                            <p>Откуда</p>
+                            <div class="custom-select" id="select-froms">
+                                <span class="select-text">Выбрать</span>
+                                <span class="arrow"></span>
+                            </div>
+                            <div class="custom-options" id="options-froms">
+                                <div class="custom-option">Москва</div>
+                                <div class="custom-option">Санкт-Петербург</div>
+                                <div class="custom-option">Новосибирск</div>
+                                <div class="custom-option">Екатеринбург</div>
+                                <div class="custom-option">Казань</div>
+                                <div class="custom-option">Красноярск</div>
+                                <div class="custom-option">Нижний Новгород</div>
+                                <div class="custom-option">Челябинск</div>
+                                <div class="custom-option">Уфа</div>
+                                <div class="custom-option">Самара</div>
+                                <div class="custom-option">Ростов-на-Дону</div>
+                                <div class="custom-option">Краснодар</div>
+                                <div class="custom-option">Омск</div>
+                                <div class="custom-option">Воронеж</div>
+                                <div class="custom-option">Пермь</div>
+                                <div class="custom-option">Волгоград</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <p>Куда</p>
+                            <div class="custom-select" id="select-tos">
+                                <span class="select-text">Выбрать</span>
+                                <span class="arrow"></span>
+                            </div>
+                            <div class="custom-options" id="options-tos">
+                                <div class="custom-option">Москва</div>
+                                <div class="custom-option">Санкт-Петербург</div>
+                                <div class="custom-option">Новосибирск</div>
+                                <div class="custom-option">Екатеринбург</div>
+                                <div class="custom-option">Казань</div>
+                                <div class="custom-option">Красноярск</div>
+                                <div class="custom-option">Нижний Новгород</div>
+                                <div class="custom-option">Челябинск</div>
+                                <div class="custom-option">Уфа</div>
+                                <div class="custom-option">Самара</div>
+                                <div class="custom-option">Ростов-на-Дону</div>
+                                <div class="custom-option">Краснодар</div>
+                                <div class="custom-option">Омск</div>
+                                <div class="custom-option">Воронеж</div>
+                                <div class="custom-option">Пермь</div>
+                                <div class="custom-option">Волгоград</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-input">
+                        <label>
+                            <input type="text" placeholder="Ваше имя">
+                        </label>
+                    </div>
+                    <div class="form-input">
+                        <label>
+                            <input type="text" placeholder="+ 7 999 999 99 99">
+                        </label>
+                    </div>
+                    <div class="input-checkbox">
+                        <label>
+                            <small>Я даю своё согласие на <a href="#">обработу персональных данных</a></small>
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-white">Оставить заявку</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+
 <script src="assets/js/jquery-3.6.4.js"></script>
 <script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/map.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -44,6 +44,9 @@ p{
     transition: 0.3s;
     white-space: nowrap;
     width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .btn:hover{
     background: #040E0F;
@@ -311,6 +314,18 @@ p{
     z-index: 10;
     display: none;
 }
+.custom-options::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 8px;
+}
+.custom-options::-webkit-scrollbar-thumb {
+    width: 4px;
+    height: 4px;
+    background: #DCDCDC;
+    border-radius: 8px;
+}
 
 .custom-options.active {
     display: block;
@@ -464,6 +479,7 @@ p{
     justify-content: space-between;
     transition: 0.3s;
     position: relative;
+    cursor: pointer;
 }
 .cooperation-box:before{
     content: "";
@@ -1176,7 +1192,7 @@ p{
         padding: 0;
     }
     .map-main {
-        margin-top: 100px;
+        margin-top: 80px;
         padding: 0 14px;
     }
     .map-contact .btn{
@@ -1282,6 +1298,9 @@ p{
     .leaders-card:nth-child(4) img{
         width: 85px;
     }
+    .price-list-tab {
+        border-radius: 16px;
+    }
 }
 
 @media (max-width: 570px){
@@ -1309,6 +1328,10 @@ p{
     }
     .deliveries-images {
         max-width: 367px;
+    }
+    .custom-option {
+        font-size: 16px;
+        line-height: 22px;
     }
 }
 @media (max-width: 390px){

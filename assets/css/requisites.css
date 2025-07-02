@@ -1,0 +1,101 @@
+.company-details{
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+.company-contact{
+    margin-top: 20px;
+}
+.company-contact a{
+    color: #0292FF;
+    border-bottom: 1px solid #0292FF;
+    transition: 0.3s;
+}
+.company-contact a:hover{
+    border-bottom: 1px solid transparent;
+}
+.abbreviated-flex{
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.abbreviated-info{
+    max-width: 590px;
+    width: 100%;
+    gap: 28px;
+}
+.abbreviated-name{
+    max-width: 440px;
+    width: 100%;
+}
+.abbreviated-name h4, .abbreviated-numb span{
+    color: #040E0F;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: left;
+}
+.abbreviated-name p{
+    margin-top: 12px;
+    font-size: 18px;
+    line-height: 24px;
+}
+.abbreviated-cnt{
+    max-width: 590px;
+    width: 100%;
+    gap: 32px;
+}
+.abbreviated-numb{
+    gap: 8px;
+}
+.abbreviated-numb p{
+    font-size: 18px;
+    line-height: 24px;
+}
+.req-contact{
+    gap: 14px;
+}
+
+.bank-details{
+    margin: 40px 0;
+}
+.bank-details h3{
+    margin-bottom: 20px;
+}
+.bank-details .abbreviated-numb{
+    margin-top: 14px;
+}
+
+
+@media (max-width: 767px){
+    .company-contact {
+        margin-top: 12px;
+    }
+    .abbreviated-flex {
+        margin-top: 32px;
+        gap: 32px;
+        flex-direction: column;
+    }
+    .abbreviated-info {
+        gap: 20px;
+    }
+    .abbreviated-name h4, .abbreviated-numb span {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .abbreviated-name p {
+        margin-top: 8px;
+    }
+    .bank-details h3 {
+        margin-bottom: 16px;
+    }
+    .bank-details {
+        margin: 32px 0;
+    }
+}
+@media (max-width: 575px){
+    .bank-details .abbreviated-numb {
+        margin-top: 14px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

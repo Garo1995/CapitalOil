@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>КапиталНефть</title>
+</head>
+<body>
+<header class="header header-fon">
+    <div class="container">
+        <div class="header-main G-align-center G-justify-between">
+            <a href="#" class="logo G-flex">
+                <img src="./assets/img/logo.svg" alt="ChatGPT">
+            </a>
+            <div class="header-cnt G-align-center">
+                <a href="#" class="number-href G-align-center">
+                    <i class="icon-location"></i>
+                    <span>Омск</span>
+                </a>
+                <a href="tel:+7 (383) 288-88-15" class="number-href G-align-center">
+                    <i class="icon-call"></i>
+                    <span>+7 (383) 288-88-15</span>
+                </a>
+                <button class="request-call G-flex">Заказать звонок</button>
+            </div>
+
+            <div class="open-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="menu-content">
+        <div class="menu-mobile G-flex-column G-align-start">
+            <a href="#" class="number-href G-align-center">
+                <i class="icon-location"></i>
+                <span>Омск</span>
+            </a>
+            <a href="tel:+7 (383) 288-88-15" class="number-href G-align-center">
+                <i class="icon-call"></i>
+                <span>+7 (383) 288-88-15</span>
+            </a>
+            <ul class="menu-scroll G-flex-column G-align-start">
+                <li><a href="index.html#price">Прайс</a></li>
+                <li><a href="index.html#cooperation">Сотрудничество</a></li>
+                <li><a href="index.html#partners">Партнёры</a></li>
+                <li><a href="index.html#contact">Контакты</a></li>
+                <li><a href="#">Реквизиты компании</a></li>
+            </ul>
+            <button class="request-call G-flex">Заказать звонок</button>
+        </div>
+    </div>
+</header>
+
+
+<section class="bread-caps">
+    <div class="container">
+        <ul class="G-align-center">
+            <li><a href="./index.html">Главная</a></li>
+            <li>Прайс</li>
+        </ul>
+    </div>
+</section>
+
+<section id="price" class="price-page sec-blocks">
+    <div class="current-price-fon">
+        <div class="container">
+            <div class="current-price-title">
+                <h2>Актуальный прайс на топливо</h2>
+                <p>
+                    Цена действительна при условии заказа доставки нашим транспортом
+                </p>
+            </div>
+
+            <div class="filter-for-mobile">
+                <span>Фильтры</span>
+                <div class="select-arrow"></div>
+            </div>
+
+            <div class="filter-group G-align-center">
+                <div class="filter-group-sel">
+                    <p>Название</p>
+                    <div class="custom-selects" data-placeholder="Название">
+                        <input type="text" class="select-input" placeholder="Все" />
+                        <div class="select-arrow"></div>
+                        <div class="select-clear">&times;</div>
+                        <div class="select-dropdown">
+                            <div class="select-option">НПЗ ЯНОС (ДТЕ)</div>
+                            <div class="select-option">НПЗ Кириши (АИ-95)</div>
+                            <div class="select-option">НПЗ Орск (ДТЗ)</div>
+                            <div class="select-option">НПЗ Омск (АИ-92)</div>
+                            <div class="select-option">НПЗ ЯНОС (ДТЕ)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-group-sel">
+                    <p>Сорт топлива</p>
+                    <div class="custom-selects" data-placeholder="Название">
+                        <input type="text" class="select-input" placeholder="Все" />
+                        <div class="select-arrow"></div>
+                        <div class="select-clear">&times;</div>
+                        <div class="select-dropdown">
+                            <div class="select-option">Дизельное топливо</div>
+                            <div class="select-option">Дизельное топливо</div>
+                            <div class="select-option">Дизельное топливо</div>
+                            <div class="select-option">Дизельное топливо</div>
+                            <div class="select-option">Дизельное топливо</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-group-sel">
+                    <p>Место отгрузки</p>
+                    <div class="custom-selects" data-placeholder="Название">
+                        <input type="text" class="select-input" placeholder="Все" />
+                        <div class="select-arrow"></div>
+                        <div class="select-clear">&times;</div>
+                        <div class="select-dropdown">
+                            <div class="select-option">НПЗ Янос (Славнефть)</div>
+                            <div class="select-option">НПЗ Янос (Славнефть)</div>
+                            <div class="select-option">НПЗ Янос (Славнефть)</div>
+                            <div class="select-option">НПЗ Янос (Славнефть)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-group-sel">
+                    <p>Регион</p>
+                    <div class="custom-selects" data-placeholder="Название">
+                        <input type="text" class="select-input" placeholder="Все" />
+                        <div class="select-arrow"></div>
+                        <div class="select-clear">&times;</div>
+                        <div class="select-dropdown">
+                            <div class="select-option">ЦФО</div>
+                            <div class="select-option">ЦФО</div>
+                            <div class="select-option">ЦФО</div>
+                            <div class="select-option">ЦФО</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-group-sel">
+                    <p>Стоимость тонны</p>
+                    <div class="custom-selects" data-placeholder="Название">
+                        <input type="text" class="select-input" placeholder="По возрастанию" />
+                        <div class="select-arrow"></div>
+                        <div class="select-clear">&times;</div>
+                        <div class="select-dropdown">
+                            <div class="select-option">По возрастанию</div>
+                            <div class="select-option">По убыванию</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="price-list-tab">
+                <div class="price-list-head">
+                    <ul class="G-align-center">
+                        <li>Название</li>
+                        <li>Сорт топлива</li>
+                        <li>Место отгрузки</li>
+                        <li>Регион</li>
+                        <li>Стоимость тонны</li>
+                    </ul>
+                </div>
+                <div class="price-list G-align-center">
+                    <div class="price-list-name">
+                        <small>Название</small>
+                        <div class="price-list-item G-align-center">
+                            <i class="icon-point"></i>
+                            <span>НПЗ ЯНОС (ДТЕ)</span>
+                        </div>
+                    </div>
+                    <div class="price-list-name">
+                        <small>Сорт топлива</small>
+                        <p>Дизельное топливо ЕВРО</p>
+                    </div>
+                    <div class="price-list-name">
+                        <small>Место отгрузки</small>
+                        <div class="price-list-item G-align-center">
+                            <i class="icon-location"></i>
+                            <span>НПЗ Янос (Славнефть)</span>
+                        </div>
+                    </div>
+                    <div class="price-list-name">
+                        <small>Регион</small>
+                        <p>ЦФО</p>
+                    </div>
+                    <div class="price-list-name">
+                        <small>Место отгрузки</small>
+                        <div class="price-list-item G-align-center">
+                            <i class="icon-price"></i>
+                            <span>51 100 ₽</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="price-list G-align-center">
+                    <div class="price-list-name">
+                        <small>Название</small>
+                        <div class="price-list-item G-align-center">
+                            <i class="icon-point"></i>
+                            <span>НПЗ ЯНОС (ДТЕ)</span>
+                        </div>
+                    </div>
+                    <div class="price-list-name">
+                        <small>Сорт топлива</small>
+                        <p>Дизельное топливо ЕВРО</p>
+                    </div>
+                    <div class="price-list-name">
+                        <small>Место отгрузки</small>
+                        <div class="price-list-item G-align-center">
+                            <i class="icon-location"></i>
+                            <span>НПЗ Янос (Славнефть)</span>
+                        </div>
+                    </div>
+                    <div class="price-list-name">
+                        <small>Регион</small>
+                        <p>ЦФО</p>
+                    </div>
+                    <div class="price-list-name">
+                        <small>Место отгрузки</small>
+                        <div class="price-list-item G-align-center">
+                            <i class="icon-price"></i>
+                            <span>51 100 ₽</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="price-list G-align-center">
+                    <div class="price-list-name">
+                        <small>Название</small>
+                        <div class="price-list-item G-align-center">
+                            <i class="icon-point"></i>
+                            <span>НПЗ ЯНОС (ДТЕ)</span>
+                        </div>
+                    </div>
+                    <div class="price-list-name">
+                        <small>Сорт топлива</small>
+                        <p>Дизельное топливо ЕВРО</p>
+                    </div>
+                    <div class="price-list-name">
+                        <small>Место отгрузки</small>
+                        <div class="price-list-item G-align-center">
+                            <i class="icon-location"></i>
+                            <span>НПЗ Янос (Славнефть)</span>
+                        </div>
+                    </div>
+                    <div class="price-list-name">
+                        <small>Регион</small>
+                        <p>ЦФО</p>
+                    </div>
+                    <div class="price-list-name">
+                        <small>Место отгрузки</small>
+                        <div class="price-list-item G-align-center">
+                            <i class="icon-price"></i>
+                            <span>51 100 ₽</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="price-list  G-align-center">
+                    <div class="price-list-name">
+                        <small>Название</small>
+                        <div class="price-list-item G-align-center">
+                            <i class="icon-point"></i>
+                            <span>НПЗ ЯНОС (ДТЕ)</span>
+                        </div>
+                    </div>
+                    <div class="price-list-name">
+                        <small>Сорт топлива</small>
+                        <p>Дизельное топливо ЕВРО</p>
+                    </div>
+                    <div class="price-list-name">
+                        <small>Место отгрузки</small>
+                        <div class="price-list-item G-align-center">
+                            <i class="icon-location"></i>
+                            <span>НПЗ Янос (Славнефть)</span>
+                        </div>
+                    </div>
+                    <div class="price-list-name">
+                        <small>Регион</small>
+                        <p>ЦФО</p>
+                    </div>
+                    <div class="price-list-name">
+                        <small>Место отгрузки</small>
+                        <div class="price-list-item G-align-center">
+                            <i class="icon-price"></i>
+                            <span>51 100 ₽</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="price-list  G-align-center">
+                    <div class="price-list-name">
+                        <small>Название</small>
+                        <div class="price-list-item G-align-center">
+                            <i class="icon-point"></i>
+                            <span>НПЗ ЯНОС (ДТЕ)</span>
+                        </div>
+                    </div>
+                    <div class="price-list-name">
+                        <small>Сорт топлива</small>
+                        <p>Дизельное топливо ЕВРО</p>
+                    </div>
+                    <div class="price-list-name">
+                        <small>Место отгрузки</small>
+                        <div class="price-list-item G-align-center">
+                            <i class="icon-location"></i>
+                            <span>НПЗ Янос (Славнефть)</span>
+                        </div>
+                    </div>
+                    <div class="price-list-name">
+                        <small>Регион</small>
+                        <p>ЦФО</p>
+                    </div>
+                    <div class="price-list-name">
+                        <small>Место отгрузки</small>
+                        <div class="price-list-item G-align-center">
+                            <i class="icon-price"></i>
+                            <span>51 100 ₽</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="price-list-pagination G-align-center G-justify-between">
+                <div class="pagination-pages G-align-center">
+                    <a href="#" class="pagination-left">
+                        <i class="icon-arrow-left"></i>
+                    </a>
+                    <ul class="G-align-center">
+                        <li class="active-pagination"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                    </ul>
+                    <a href="#" class="pagination-right">
+                        <i class="icon-arrow-right"></i>
+                    </a>
+                </div>
+
+                <a href="#" download="" class="download-price G-align-center">
+                    <span>Скачать прайс</span>
+                    <i class="icon-download"></i>
+                </a>
+            </div>
+
+            <div class="online-calc">
+                <h3>Онлайн-расчёт стоимости доставки топлива</h3>
+                <div class="online-calc-cnt G-align-end G-justify-between">
+                    <div class="form-group">
+                        <p>Откуда</p>
+                        <div class="custom-select" id="select-from">
+                            <span class="select-text">Выбрать</span>
+                            <span class="arrow"></span>
+                        </div>
+                        <div class="custom-options" id="options-from">
+                            <div class="custom-option">Москва</div>
+                            <div class="custom-option">Санкт-Петербург</div>
+                            <div class="custom-option">Новосибирск</div>
+                            <div class="custom-option">Екатеринбург</div>
+                            <div class="custom-option">Казань</div>
+                            <div class="custom-option">Красноярск</div>
+                            <div class="custom-option">Нижний Новгород</div>
+                            <div class="custom-option">Челябинск</div>
+                            <div class="custom-option">Уфа</div>
+                            <div class="custom-option">Самара</div>
+                            <div class="custom-option">Ростов-на-Дону</div>
+                            <div class="custom-option">Краснодар</div>
+                            <div class="custom-option">Омск</div>
+                            <div class="custom-option">Воронеж</div>
+                            <div class="custom-option">Пермь</div>
+                            <div class="custom-option">Волгоград</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <p>Куда</p>
+                        <div class="custom-select" id="select-to">
+                            <span class="select-text">Выбрать</span>
+                            <span class="arrow"></span>
+                        </div>
+                        <div class="custom-options" id="options-to">
+                            <div class="custom-option">Москва</div>
+                            <div class="custom-option">Санкт-Петербург</div>
+                            <div class="custom-option">Новосибирск</div>
+                            <div class="custom-option">Екатеринбург</div>
+                            <div class="custom-option">Казань</div>
+                            <div class="custom-option">Красноярск</div>
+                            <div class="custom-option">Нижний Новгород</div>
+                            <div class="custom-option">Челябинск</div>
+                            <div class="custom-option">Уфа</div>
+                            <div class="custom-option">Самара</div>
+                            <div class="custom-option">Ростов-на-Дону</div>
+                            <div class="custom-option">Краснодар</div>
+                            <div class="custom-option">Омск</div>
+                            <div class="custom-option">Воронеж</div>
+                            <div class="custom-option">Пермь</div>
+                            <div class="custom-option">Волгоград</div>
+                        </div>
+                    </div>
+                    <button class="btn">Получить спецпредложение</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="cooperation-main">
+    <div class="container">
+        <div class="cooperation-title">
+            <h2>Как начать сотрудничество</h2>
+            <p>
+                Оформите все онлайн без визитов в офис
+            </p>
+        </div>
+        <div class="cooperation-cnt G-flex-wrap">
+            <a href="#" class="cooperation-box coop-primary">
+                <div class="cooperation-name">
+                    <h3>Регистрация</h3>
+                    <p>Быстрая регистрация за пару кликов</p>
+                </div>
+                <div class="cooperation-arrow G-align-center G-justify-between">
+                    <span>Зарегистрироваться</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <g clip-path="url(#clip0_318_349)">
+                            <path d="M7.46336 5.75063L7.46336 8.63798H17.1566L4.57601 21.2186L6.63841 23.281L19.219 10.7004L19.219 20.3936L22.1064 20.3936V5.75063L7.46336 5.75063Z"
+                                  fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_318_349">
+                                <rect width="28" height="28" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+            </a>
+            <a href="#" class="cooperation-box coop-sliver">
+                <div class="cooperation-name">
+                    <h3>Подтверждение организации</h3>
+                    <p>Подтвердите учётные данные вашей компании после регистрации</p>
+                </div>
+                <div class="cooperation-arrow G-align-center G-justify-between">
+                    <span>Подтвердить организацию</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <g clip-path="url(#clip0_318_349)">
+                            <path d="M7.46336 5.75063L7.46336 8.63798H17.1566L4.57601 21.2186L6.63841 23.281L19.219 10.7004L19.219 20.3936L22.1064 20.3936V5.75063L7.46336 5.75063Z"
+                                  fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_318_349">
+                                <rect width="28" height="28" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+            </a>
+            <a href="#" class="cooperation-box coop-black">
+                <div class="cooperation-name">
+                    <h3>Заключение договора поставки</h3>
+                    <p>Заполните форму и подтвердите покупку через личный кабинет</p>
+                </div>
+                <div class="cooperation-arrow G-align-center G-justify-between">
+                    <span>Заключить договор</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <g clip-path="url(#clip0_318_349)">
+                            <path d="M7.46336 5.75063L7.46336 8.63798H17.1566L4.57601 21.2186L6.63841 23.281L19.219 10.7004L19.219 20.3936L22.1064 20.3936V5.75063L7.46336 5.75063Z"
+                                  fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_318_349">
+                                <rect width="28" height="28" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+            </a>
+            <a href="#" class="cooperation-box coop-blue">
+                <div class="cooperation-name">
+                    <h3>Раздел «Помощь»</h3>
+                    <p>Формы договоров и подробные инструкции по пользованию сайтом</p>
+                </div>
+                <div class="cooperation-arrow G-align-center G-justify-between">
+                    <span>Перейти в раздел</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <g clip-path="url(#clip0_318_349)">
+                            <path d="M7.46336 5.75063L7.46336 8.63798H17.1566L4.57601 21.2186L6.63841 23.281L19.219 10.7004L19.219 20.3936L22.1064 20.3936V5.75063L7.46336 5.75063Z"
+                                  fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_318_349">
+                                <rect width="28" height="28" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section id="contact" class="map-main ">
+    <div class="container">
+        <div class="map-contact ">
+            <h2>Контакты</h2>
+            <div class="map-contact-info G-flex-column">
+                <div class="map-contact-name G-align-center">
+                    <i class="icon-location"></i>
+                    <span>г. Новосибирск, <br> ул.Ядринцевская 68/1, оф 608</span>
+                </div>
+                <a href="tel:+7 (383) 288-88-15" class="map-contact-name G-align-center">
+                    <i class="icon-call"></i>
+                    <span>+7 (383) 288-88-15</span>
+                </a>
+                <a href="mailto:vimpioil@yandex.ru" class="map-contact-name G-align-center">
+                    <i class="icon-mail"></i>
+                    <span>vimpioil@yandex.ru</span>
+                </a>
+            </div>
+            <button class="btn">Заказать топливо</button>
+        </div>
+    </div>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+    </script>
+    <div id="map"></div>
+
+    <div class="contact-btn-mobile">
+        <button class="btn">Заказать топливо</button>
+
+    </div>
+</section>
+
+
+<footer>
+    <div class="container">
+        <div class="footer-main G-align-start G-justify-between">
+            <div class="footer-info G-align-start G-justify-between">
+                <a href="#" class="footer-logo G-flex">
+                    <img src="./assets/img/logo.svg" alt="logo">
+                </a>
+                <div class="footer-contact G-align-end G-flex-column">
+                    <a href="tel:+7 (383) 288-88-15" class="footer-number">+7 (383) 288-88-15</a>
+                    <a href="mailto:vimpioil@yandex.ru" class="footer-mail">vimpioil@yandex.ru</a>
+                </div>
+            </div>
+            <div class="footer-info G-align-start G-justify-between">
+                <div class="footer-menu">
+                    <ul class="menu-scroll G-flex-column G-align-start">
+                        <li><a href="#price">Прайс</a></li>
+                        <li><a href="#cooperation">Сотрудничество</a></li>
+                        <li><a href="#partners">Партнёры</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                        <li><a href="#">Реквизиты компании</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact-mob G-align-end G-flex-column">
+                    <a href="tel:+7 (383) 288-88-15" class="footer-number">+7 (383) 288-88-15</a>
+                    <a href="mailto:vimpioil@yandex.ru" class="footer-mail">vimpioil@yandex.ru</a>
+                </div>
+                <div class="footer-location">
+                    <p>г. Новосибирск, </p>
+                    <p>ул.Ядринцевская 68/1, оф 608</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="privacy-policy-info G-justify-between G-align-end">
+            <div class="privacy-policy G-flex-column G-align-start">
+                <a href="#">Политика конфиденциальности</a>
+                <p>
+                    Вся информация о товарах и ценах, предоставленная на сайте, носит исключительно информационный
+                    характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи
+                    437 Гражданского кодекса Российской Федерации. Окончательные условия сотрудничества закрепляются в
+                    договоре.
+                </p>
+            </div>
+            <div class="rights-reserved G-flex-column G-align-end">
+                <p>© 2025 ДТ Оптом.</p>
+                <p>Все права защищены.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/jquery-3.6.4.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/map.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
