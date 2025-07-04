@@ -382,7 +382,7 @@ p{
 
 .conditions-fon{
     width: 100%;
-    background-image: url("../img/conditions.png");
+    background-image: url("../img/conditions.webp");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 100px 0;
@@ -677,7 +677,7 @@ p{
     background-size: cover;
     background-repeat: no-repeat;
     padding: 100px 0;
-    background-image: url("../img/leaders.png");
+    background-image: url("../img/leaders.webp");
     border-radius: 20px;
 }
 .leaders-trust-title h2{
