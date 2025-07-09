@@ -262,6 +262,9 @@ p{
     width: 100%;
     position: relative;
 }
+.delivery-select p{
+    margin-bottom: 8px;
+}
 .form-group p{
     color: #878787;
     font-weight: 500;
@@ -365,7 +368,6 @@ p{
     font-weight: 400;
     font-size: 20px;
     line-height: 26px;
-    color: #4A4D4D;
     transition: 0.3s;
     width: 100%;
 }
@@ -391,6 +393,10 @@ p{
     padding: 16px 40px 16px 20px;
 
 }
+.changed .jq-selectbox__select-text{
+    color: #040E0F;
+}
+
 
 .jq-selectbox__dropdown{
     top: 108%;
@@ -881,7 +887,7 @@ p{
     color: #FFFFFF;
 }
 .manager-form-title p{
-    max-width: 358px;
+    max-width: 370px;
     width: 100%;
     text-align: left;
 }
@@ -1114,8 +1120,15 @@ p{
     font-size: 14px;
     line-height: 18px;
     margin: 0;
+    color: #DCDCDC;
+}
+.file-label.selected span {
+    color: #040E0F;
 }
 
+.file-label.selected:before {
+    filter: brightness(0);
+}
 .the-company{
     margin-top: 20px;
     position: relative;
@@ -1242,9 +1255,32 @@ p{
     display: none;
 }
 
+.quiz-one,
+.quiz-two,
+.quiz-three,
+.quiz-four {
+    display: none;
+}
+.btn-next{
+    margin-left: auto;
+}
 
+.form-input label{
+    position: relative;
+}
+.num-ton{
+    position: absolute;
+    left: 46px;
+    top: 13px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #4A4D4D;
+}
+.form-input-active .num-ton{
+    color: #040E0F;
 
-
+}
 
 @media (max-width: 1399px){
     .map-contact-name span {
@@ -1904,11 +1940,11 @@ p{
     .the-company-data p {
         max-width: 282px;
     }
-    #modal-contract {
+    #modal-manager {
         overflow-y: scroll;
     }
-    #modal-contract .modal-content{
-        padding: 14px;
+    #modal-manager .modal-content{
+        padding: 24px 14px 20px;
     }
     .file-upload-wrapper {
         gap: 8px;
@@ -1934,9 +1970,7 @@ p{
     .manager-form-flex {
         margin-top: 5px;
     }
-    .attach-company small{
-        display: none;
-    }
+
     .attach-company {
         margin-top: 32px;
         gap: 16px;

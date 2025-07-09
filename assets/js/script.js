@@ -76,6 +76,19 @@ let conditionsSwiper = new Swiper(".conditions-slider", {
 
 
 
+let principlesSwiper = new Swiper(".principles-slider", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    pagination: {
+        el: ".principles-pagination",
+        clickable: true,
+    },
+});
+
+
+
+
 
 $(function () {
     let Accordion = function (el, multiple) {
@@ -110,26 +123,30 @@ $(document).ready(function () {
     $('select').styler();
 });
 
-
 $('.open_modal').on('click', function (e) {
     e.preventDefault();
     let attr = $(this).attr('data-val');
-
     let modal = $('#' + attr);
 
+    // Получаем значения из главных селектов
+    let fromVal = $('#mainFrom').val();
+    let toVal = $('#mainTo').val();
 
+    // Подставляем в модалку и обновляем плагин
+    modal.find('#modalFrom').val(fromVal).trigger('refresh');
+    modal.find('#modalTo').val(toVal).trigger('refresh');
+
+    // Показываем модалку
     modal.removeClass('out');
     $('body').css({overflow: 'hidden'});
     modal.fadeIn();
 
-
-    // Найти и запустить таймер в этом модальном окне
+    // Таймер (если есть)
     const timerEl = modal.find('.modal-timer')[0];
     if (timerEl) {
         startCountdownTimer(timerEl);
     }
 });
-
 $('.close').on('click', function () {
     let prt = $(this).parents('.modal');
     prt.addClass('out')
@@ -173,112 +190,8 @@ $(window).on('click', function (event) {
 });
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    const shippingRadios = document.querySelectorAll('input[name="shipping"]');
-    const deliveryRadios = document.querySelectorAll('input[name="delivery"]');
-    const targetBlock = document.querySelector('.modal-shipping-sel');
-
-    function checkConditions() {
-        const shippingSelected = document.querySelector('input[name="shipping"]:checked');
-        const deliverySelected = document.querySelector('input[name="delivery"]:checked');
-
-        const shippingValue = shippingSelected?.closest('label')?.textContent.trim();
-        const deliveryValue = deliverySelected?.closest('label')?.textContent.trim();
-
-        if (shippingValue === 'Ж/Д' && deliveryValue === 'Да') {
-            targetBlock.classList.add('active'); // добавляем нужный класс
-        } else {
-            targetBlock.classList.remove('active'); // удаляем, если условия не совпали
-        }
-    }
-
-    shippingRadios.forEach(radio => {
-        radio.addEventListener('change', checkConditions);
-    });
-
-    deliveryRadios.forEach(radio => {
-        radio.addEventListener('change', checkConditions);
-    });
-});
 
 
-function startCountdownTimer(timerEl) {
-    let duration = parseInt(timerEl.getAttribute('data-time')) * 60;
-    let timer = duration;
-
-    // Если уже был интервал — сбросить
-    if (timerEl._interval) clearInterval(timerEl._interval);
-
-    timerEl._interval = setInterval(() => {
-        let minutes = Math.floor(timer / 60);
-        let seconds = timer % 60;
-
-        minutes = minutes < 10 ? '0' + minutes : minutes;
-        seconds = seconds < 10 ? '0' + seconds : seconds;
-
-        timerEl.textContent = `${minutes}:${seconds}`;
-
-        if (--timer < 0) {
-            clearInterval(timerEl._interval);
-            timerEl.textContent = 'Время вышло';
-            // Здесь можешь отключить кнопку, скрыть форму и т.д.
-        }
-    }, 1000);
-}
-
-
-
-const fileInput = document.getElementById('fileInput');
-const fileName = document.getElementById('fileName');
-
-fileInput.addEventListener('change', function () {
-    if (this.files.length > 0) {
-        fileName.textContent = ' ' + this.files[0].name;
-    } else {
-        fileName.textContent = ' Файл не выбран';
-    }
-});
-
-
-
-
-$('.price-see-more').on('click',function () {
-    $('.price-see-more').addClass('price-see-none');
-    $('.price-list').removeClass('price-none-mob');
-})
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const targets = document.querySelectorAll(".animation"); // находим ВСЕ .animation
-
-    const observer = new IntersectionObserver(
-        function (entries, observer) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("active"); // добавляем .active каждому элементу
-                    observer.unobserve(entry.target); // отключаем, если нужно один раз
-                }
-            });
-        },
-        {
-            threshold: 0.5, // 50% блока должно быть видно
-        }
-    );
-    targets.forEach(target => observer.observe(target)); // запускаем observer для каждого
-});
-
-
-
-
-
-
-
-$('.filter-for-mobile').on('click', function () {
-    $(this).toggleClass('filter-mobile-open');
-    $('.filter-group').toggleClass('filter-group-active');
-})
 
 
 
@@ -339,44 +252,176 @@ document.querySelectorAll(".custom-selects").forEach((select) => {
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    const shippingRadios = document.querySelectorAll('input[name="shipping"]');
+    const deliveryRadios = document.querySelectorAll('input[name="delivery"]');
+    const targetBlock = document.querySelector('.modal-shipping-sel');
 
+    function checkConditions() {
+        const shippingSelected = document.querySelector('input[name="shipping"]:checked');
+        const deliverySelected = document.querySelector('input[name="delivery"]:checked');
 
+        const shippingValue = shippingSelected?.closest('label')?.textContent.trim();
+        const deliveryValue = deliverySelected?.closest('label')?.textContent.trim();
 
-
-
-
-
-
-function setupSelect(selectId, optionsId) {
-    const select = document.getElementById(selectId);
-    const options = document.getElementById(optionsId);
-    const textEl = select.querySelector('.select-text');
-    const items = options.querySelectorAll('.custom-option');
-    select.addEventListener('click', () => {
-        const isActive = options.classList.contains('active');
-        // Закрываем все другие селекты
-        document.querySelectorAll('.custom-options').forEach(opt => opt.classList.remove('active'));
-        document.querySelectorAll('.custom-select').forEach(sel => sel.classList.remove('open'));
-        if (!isActive) {
-            options.classList.add('active');
-            select.classList.add('open');
+        if (shippingValue === 'Ж/Д' && deliveryValue === 'Да') {
+            targetBlock.classList.add('active'); // добавляем нужный класс
+        } else {
+            targetBlock.classList.remove('active'); // удаляем, если условия не совпали
         }
+    }
+
+    shippingRadios.forEach(radio => {
+        radio.addEventListener('change', checkConditions);
     });
-    items.forEach(option => {
-        option.addEventListener('click', () => {
-            textEl.textContent = option.textContent;
-            options.classList.remove('active');
-            select.classList.remove('open');
-        });
+
+    deliveryRadios.forEach(radio => {
+        radio.addEventListener('change', checkConditions);
     });
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.form-group')) {
-            options.classList.remove('active');
-            select.classList.remove('open');
+});
+
+
+function startCountdownTimer(timerEl) {
+    let duration = parseInt(timerEl.getAttribute('data-time')) * 60;
+    let timer = duration;
+
+    // Если уже был интервал — сбросить
+    if (timerEl._interval) clearInterval(timerEl._interval);
+
+    timerEl._interval = setInterval(() => {
+        let minutes = Math.floor(timer / 60);
+        let seconds = timer % 60;
+
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+
+        timerEl.textContent = `${minutes}:${seconds}`;
+
+        if (--timer < 0) {
+            clearInterval(timerEl._interval);
+            timerEl.textContent = 'Время вышло';
+            // Здесь можешь отключить кнопку, скрыть форму и т.д.
         }
-    });
+    }, 1000);
 }
-setupSelect('select-from', 'options-from');
-setupSelect('select-to', 'options-to');
-setupSelect('select-froms', 'options-froms');
-setupSelect('select-tos', 'options-tos');
+
+
+
+document.getElementById('fileInput').addEventListener('change', function () {
+    const fileLabel = this.closest('.file-label');
+    const fileNameSpan = document.getElementById('fileName');
+    const fileName = this.files[0]?.name || 'Файл не выбран';
+
+    fileNameSpan.textContent = fileName;
+
+    if (this.files.length > 0) {
+        fileLabel.classList.add('selected');
+    } else {
+        fileLabel.classList.remove('selected');
+    }
+});
+
+
+
+
+$('.price-see-more').on('click',function () {
+    $('.price-see-more').addClass('price-see-none');
+    $('.price-list').removeClass('price-none-mob');
+})
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const targets = document.querySelectorAll(".animation"); // находим ВСЕ .animation
+
+    const observer = new IntersectionObserver(
+        function (entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active"); // добавляем .active каждому элементу
+                    observer.unobserve(entry.target); // отключаем, если нужно один раз
+                }
+            });
+        },
+        {
+            threshold: 0.5, // 50% блока должно быть видно
+        }
+    );
+    targets.forEach(target => observer.observe(target)); // запускаем observer для каждого
+});
+
+
+
+
+
+
+
+$('.filter-for-mobile').on('click', function () {
+    $(this).toggleClass('filter-mobile-open');
+    $('.filter-group').toggleClass('filter-group-active');
+})
+
+
+
+
+
+
+$('.form-input').on('click', function () {
+    $(this).addClass('form-input-active');
+})
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const steps = document.querySelectorAll(".quiz-one, .quiz-two, .quiz-three, .quiz-four");
+    const nextBtn = document.querySelector(".btn-next");
+    const prevBtn = document.querySelector(".btn-prev");
+
+    let currentStep = 0;
+
+    function showStep(index) {
+        steps.forEach((step, i) => {
+            step.style.display = i === index ? "block" : "none";
+        });
+
+        // Управляем видимостью кнопки "назад"
+        if (prevBtn) {
+            prevBtn.style.display = index === 0 ? "none" : "inline-block";
+        }
+
+        // Можно также скрыть "Далее" на последнем шаге
+        if (nextBtn) {
+            nextBtn.textContent = index === steps.length - 1 ? "Отправить" : "Далее";
+        }
+    }
+
+    // Показать первый шаг при загрузке
+    showStep(currentStep);
+
+    // Обработчик на кнопку "Далее"
+    nextBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        if (currentStep < steps.length - 1) {
+            currentStep++;
+            showStep(currentStep);
+        } else {
+            // Последний шаг — отправка формы
+            document.querySelector("form").submit();
+        }
+    });
+
+    // Обработчик на кнопку "Назад"
+    prevBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        if (currentStep > 0) {
+            currentStep--;
+            showStep(currentStep);
+        }
+    });
+});
+
+
+
+
+
