@@ -106,27 +106,40 @@ $(function () {
     let accordion = new Accordion($('#accordion'), false);
 });
 
+$(document).ready(function () {
+    $('select').styler();
+});
 
 
-
-$('.open_modal').on('click', function () {
+$('.open_modal').on('click', function (e) {
+    e.preventDefault();
     let attr = $(this).attr('data-val');
 
     let modal = $('#' + attr);
-
-    // 👇 ВСТАВЛЯЕМ ВОТ ЭТО:
-    const fromValue = document.querySelector('#select-from .select-text').textContent;
-    const toValue = document.querySelector('#select-to .select-text').textContent;
-    document.querySelector('#select-froms .select-text').textContent = fromValue;
-    document.querySelector('#select-tos .select-text').textContent = toValue;
 
 
     modal.removeClass('out');
     $('body').css({overflow: 'hidden'});
     modal.fadeIn();
+
+
+    // Найти и запустить таймер в этом модальном окне
+    const timerEl = modal.find('.modal-timer')[0];
+    if (timerEl) {
+        startCountdownTimer(timerEl);
+    }
 });
 
 $('.close').on('click', function () {
+    let prt = $(this).parents('.modal');
+    prt.addClass('out')
+    setTimeout(function () {
+        prt.fadeOut();
+    }, 100);
+    $('body').css({overflow: 'visible '})
+
+})
+$('.close-mod').on('click', function () {
     let prt = $(this).parents('.modal');
     prt.addClass('out')
     setTimeout(function () {
@@ -160,6 +173,71 @@ $(window).on('click', function (event) {
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    const shippingRadios = document.querySelectorAll('input[name="shipping"]');
+    const deliveryRadios = document.querySelectorAll('input[name="delivery"]');
+    const targetBlock = document.querySelector('.modal-shipping-sel');
+
+    function checkConditions() {
+        const shippingSelected = document.querySelector('input[name="shipping"]:checked');
+        const deliverySelected = document.querySelector('input[name="delivery"]:checked');
+
+        const shippingValue = shippingSelected?.closest('label')?.textContent.trim();
+        const deliveryValue = deliverySelected?.closest('label')?.textContent.trim();
+
+        if (shippingValue === 'Ж/Д' && deliveryValue === 'Да') {
+            targetBlock.classList.add('active'); // добавляем нужный класс
+        } else {
+            targetBlock.classList.remove('active'); // удаляем, если условия не совпали
+        }
+    }
+
+    shippingRadios.forEach(radio => {
+        radio.addEventListener('change', checkConditions);
+    });
+
+    deliveryRadios.forEach(radio => {
+        radio.addEventListener('change', checkConditions);
+    });
+});
+
+
+function startCountdownTimer(timerEl) {
+    let duration = parseInt(timerEl.getAttribute('data-time')) * 60;
+    let timer = duration;
+
+    // Если уже был интервал — сбросить
+    if (timerEl._interval) clearInterval(timerEl._interval);
+
+    timerEl._interval = setInterval(() => {
+        let minutes = Math.floor(timer / 60);
+        let seconds = timer % 60;
+
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+
+        timerEl.textContent = `${minutes}:${seconds}`;
+
+        if (--timer < 0) {
+            clearInterval(timerEl._interval);
+            timerEl.textContent = 'Время вышло';
+            // Здесь можешь отключить кнопку, скрыть форму и т.д.
+        }
+    }, 1000);
+}
+
+
+
+const fileInput = document.getElementById('fileInput');
+const fileName = document.getElementById('fileName');
+
+fileInput.addEventListener('change', function () {
+    if (this.files.length > 0) {
+        fileName.textContent = ' ' + this.files[0].name;
+    } else {
+        fileName.textContent = ' Файл не выбран';
+    }
+});
 
 
 

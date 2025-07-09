@@ -702,13 +702,69 @@
                             <span class="checkmark"></span>
                         </label>
                     </div>
-                    <button type="submit" class="btn btn-white">Оставить заявку</button>
+                    <button type="submit" data-val="modal-manager" class="open_modal close-mod btn btn-white">Оставить заявку</button>
                 </div>
             </form>
 
         </div>
     </div>
 </div>
+
+
+
+<div id="modal-manager" class="modal">
+    <div class="modal-content">
+        <div class="modal-form modal-manager-form">
+            <div class="close"></div>
+            <div class="manager-form-flex G-justify-between">
+                <div class="manager-form-title">
+                    <h3>Менеджер свяжется с Вами в течение 10 минут</h3>
+                    <p>Заполните дополнительные данные, чтобы заявка была обработана быстрее</p>
+                </div>
+
+                <div class="modal-timer G-center" data-time="10">10:00</div>
+
+            </div>
+            <form>
+                <div class="manager-form-inp G-align-center">
+                    <div class="form-input">
+                        <small>ИНН</small>
+                        <label>
+                            <input type="text" placeholder="ХХХХХ ХХХХХ">
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <small>Продукт</small>
+                        <label class="form-select-label">
+                            <select>
+                                <option value="">Выбрать</option>
+                                <option value="Москва">Москва</option>
+                                <option value="Санкт-Петербург">Санкт-Петербург</option>
+                                <option value="Новосибирск">Новосибирск</option>
+                                <option value="Екатеринбург">Екатеринбург</option>
+                                <option value="Казань">Казань</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="form-input">
+                        <small>Объём топлива</small>
+                        <label>
+                            <input type="text" value="5 тонн">
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="manager-form-btn G-justify-end">
+                    <button class="btn btn-white">Далее</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
 
 
 
@@ -744,10 +800,108 @@
                             <span class="checkmark"></span>
                         </label>
                     </div>
-                    <button type="submit" class="btn btn-white">Оставить заявку</button>
+                    <button type="submit" data-val="modal-contract" class="open_modal close-mod btn btn-white">Оставить заявку</button>
                 </div>
             </form>
 
+        </div>
+    </div>
+</div>
+
+
+<div id="modal-contract" class="modal">
+    <div class="modal-content">
+        <div class="modal-form modal-manager-form">
+            <div class="close"></div>
+            <div class="manager-form-flex G-justify-between">
+                <div class="manager-form-title">
+                    <h3>Менеджер свяжется с Вами в течение 10 минут</h3>
+                    <p>Заполните дополнительные данные, чтобы заявка была обработана быстрее</p>
+                </div>
+
+                <div class="modal-timer G-center" data-time="10">10:00</div>
+
+            </div>
+
+            <div class="guarantee-from">
+                <h4>Не просто поставки — гарантия от первого лица</h4>
+                <div class="guarantee-from-fl G-align-center">
+                    <img src="./assets/img/gener.png" alt="gener">
+                    <div class="guarantee-from-name">
+                        <span>Чернышов Олег Михайлович</span>
+                        <p>Генеральный директор ООО «Капиталнефть»</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stable-supplies G-align-center G-justify-between">
+                <div class="stable-supplies-info G-align-center">
+                    <div class="stable-supplies-box G-center">
+                        <div class="stable-stroke G-center">
+                            15+
+                        </div>
+                    </div>
+                    <p>лет в нефтегазовой <br> отрасли</p>
+                </div>
+                <div class="stable-supplies-info G-align-center">
+                    <div class="stable-supplies-box G-center">
+                       <div class="stable-stroke G-center">
+                           25+
+                       </div>
+                    </div>
+                    <p>регионов — <br> стабильные поставки</p>
+                </div>
+                <div class="stable-supplies-info G-align-center">
+                    <div class="stable-supplies-box G-center">
+                        <div class="stable-stroke G-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+                                <path d="M15.8223 1.26953C16.192 0.926018 16.7707 0.909333 17.1621 1.24805C17.5832 1.61261 17.6175 2.24447 17.2578 2.66016L17.2568 2.66113L6.75684 14.6611V14.6621C6.57557 14.8684 6.31443 14.9915 6.04102 15.0039L5.97559 15.0078L5.95508 14.9971C5.70811 14.9853 5.47108 14.8822 5.29492 14.7061L0.794922 10.2061C0.407041 9.81788 0.407071 9.18214 0.794922 8.79395C1.18318 8.40569 1.81975 8.40569 2.20801 8.79395L5.95117 12.5371L15.751 1.34277L15.8223 1.26953Z" fill="white" stroke="white" stroke-width="0.5"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p>лично контролирует качество <br> топлива и логистику</p>
+                </div>
+            </div>
+
+            <div class="guarantee-from">
+                <h4>Достижения компании</h4>
+                <div class="the-company G-align-start">
+                    <div class="the-company-data G-flex-column G-align-start">
+                        <strong>2010г.</strong>
+                        <span></span>
+                        <p>
+                            Основание компании
+                        </p>
+                    </div>
+                    <div class="the-company-data G-flex-column G-align-start">
+                        <strong>2015г.</strong>
+                        <span></span>
+                        <p>
+                            Выход на федеральный уровень
+                        </p>
+                    </div>
+                    <div class="the-company-data G-flex-column G-align-start">
+                        <strong>2020г.</strong>
+                        <span></span>
+                        <p>
+                            Запуск собственной логистической сети
+                        </p>
+                    </div>
+                    <div class="the-company-data G-flex-column G-align-start">
+                        <strong>2025г.</strong>
+                        <span></span>
+                        <p>
+                            500+ постоянных клиентов
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="manager-form-btn G-justify-between G-align-center">
+                <button class="go-back-btn close-mod"></button>
+                <button class="btn btn-white">Далее</button>
+            </div>
         </div>
     </div>
 </div>
@@ -785,7 +939,7 @@
                             <span class="checkmark"></span>
                         </label>
                     </div>
-                    <button type="submit" class="btn btn-white">Оставить заявку</button>
+                    <button type="submit" data-val="modal-order" class=" open_modal close-mod btn btn-white">Оставить заявку</button>
                 </div>
             </form>
 
@@ -794,6 +948,49 @@
 </div>
 
 
+<div id="modal-order" class="modal">
+    <div class="modal-content">
+        <div class="modal-form modal-manager-form">
+            <div class="close"></div>
+            <div class="manager-form-flex G-justify-between">
+                <div class="manager-form-title">
+                    <h3>Менеджер свяжется с Вами в течение 10 минут</h3>
+                    <p>Заполните дополнительные данные, чтобы заявка была обработана быстрее</p>
+                </div>
+
+                <div class="modal-timer G-center" data-time="10">10:00</div>
+
+            </div>
+
+
+            <div class="attach-company G-flex-column">
+                <h4>Прикрепите карточку предприятия</h4>
+
+                <div class="file-upload-wrapper">
+                    <label class="file-label">
+                        <input type="file" id="fileInput" />
+                        <span id="fileName"> Файл не выбран</span>
+                    </label>
+                    <button class="file-button" onclick="document.getElementById('fileInput').click()">
+                        <span class="select-file-span">Выбрать файл</span>
+                        <span class="select-file-plus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
+                                <path d="M14.8876 22.9604V15.4048L22.4431 15.4048C22.9338 15.4048 23.332 15.0075 23.332 14.516C23.332 14.0244 22.9338 13.6271 22.4431 13.6271L14.8876 13.6271L14.8876 6.07151C14.8876 5.57994 14.4894 5.18262 13.9987 5.18262C13.508 5.18262 13.1098 5.57994 13.1098 6.07151L13.1098 13.6271H5.55425C5.0636 13.6271 4.66536 14.0244 4.66536 14.516C4.66536 15.0075 5.0636 15.4048 5.55425 15.4048H13.1098V22.9604C13.1098 23.452 13.508 23.8493 13.9987 23.8493C14.4894 23.8493 14.8876 23.452 14.8876 22.9604Z" fill="#0292FF"/>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <small>Поддерживаемые форматы: PDF, DOC, XLSX</small>
+            </div>
+
+
+            <div class="manager-form-btn G-justify-between G-align-center">
+                <button class="go-back-btn close-mod"></button>
+                <button class="btn btn-white">Далее</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <div id="special-offer" class="modal">
@@ -810,54 +1007,52 @@
                     <div class="special-offer-fl G-align-center">
                         <div class="form-group">
                             <p>Откуда</p>
-                            <div class="custom-select" id="select-froms">
-                                <span class="select-text">Выбрать</span>
-                                <span class="arrow"></span>
-                            </div>
-                            <div class="custom-options" id="options-froms">
-                                <div class="custom-option">Москва</div>
-                                <div class="custom-option">Санкт-Петербург</div>
-                                <div class="custom-option">Новосибирск</div>
-                                <div class="custom-option">Екатеринбург</div>
-                                <div class="custom-option">Казань</div>
-                                <div class="custom-option">Красноярск</div>
-                                <div class="custom-option">Нижний Новгород</div>
-                                <div class="custom-option">Челябинск</div>
-                                <div class="custom-option">Уфа</div>
-                                <div class="custom-option">Самара</div>
-                                <div class="custom-option">Ростов-на-Дону</div>
-                                <div class="custom-option">Краснодар</div>
-                                <div class="custom-option">Омск</div>
-                                <div class="custom-option">Воронеж</div>
-                                <div class="custom-option">Пермь</div>
-                                <div class="custom-option">Волгоград</div>
-                            </div>
+                            <label class="form-select-label">
+                                <select>
+                                    <option value="">Выбрать</option>
+                                    <option value="Москва">Москва</option>
+                                    <option value="Санкт-Петербург">Санкт-Петербург</option>
+                                    <option value="Новосибирск">Новосибирск</option>
+                                    <option value="Екатеринбург">Екатеринбург</option>
+                                    <option value="Казань">Казань</option>
+                                    <option value="Красноярск">Красноярск</option>
+                                    <option value="Нижний Новгород">Нижний Новгород</option>
+                                    <option value="Челябинск">Челябинск</option>
+                                    <option value="Уфа">Уфа</option>
+                                    <option value="Самара">Самара</option>
+                                    <option value="Ростов-на-Дону">Ростов-на-Дону</option>
+                                    <option value="Краснодар">Краснодар</option>
+                                    <option value="Омск">Омск</option>
+                                    <option value="Воронеж">Воронеж</option>
+                                    <option value="Пермь"> Пермь</option>
+                                    <option value="Волгоград">Волгоград</option>
+                                </select>
+                            </label>
                         </div>
 
                         <div class="form-group">
                             <p>Куда</p>
-                            <div class="custom-select" id="select-tos">
-                                <span class="select-text">Выбрать</span>
-                                <span class="arrow"></span>
-                            </div>
-                            <div class="custom-options" id="options-tos">
-                                <div class="custom-option">Москва</div>
-                                <div class="custom-option">Санкт-Петербург</div>
-                                <div class="custom-option">Новосибирск</div>
-                                <div class="custom-option">Екатеринбург</div>
-                                <div class="custom-option">Казань</div>
-                                <div class="custom-option">Красноярск</div>
-                                <div class="custom-option">Нижний Новгород</div>
-                                <div class="custom-option">Челябинск</div>
-                                <div class="custom-option">Уфа</div>
-                                <div class="custom-option">Самара</div>
-                                <div class="custom-option">Ростов-на-Дону</div>
-                                <div class="custom-option">Краснодар</div>
-                                <div class="custom-option">Омск</div>
-                                <div class="custom-option">Воронеж</div>
-                                <div class="custom-option">Пермь</div>
-                                <div class="custom-option">Волгоград</div>
-                            </div>
+                            <label class="form-select-label">
+                                <select>
+                                    <option value="">Выбрать</option>
+                                    <option value="Москва">Москва</option>
+                                    <option value="Санкт-Петербург">Санкт-Петербург</option>
+                                    <option value="Новосибирск">Новосибирск</option>
+                                    <option value="Екатеринбург">Екатеринбург</option>
+                                    <option value="Казань">Казань</option>
+                                    <option value="Красноярск">Красноярск</option>
+                                    <option value="Нижний Новгород">Нижний Новгород</option>
+                                    <option value="Челябинск">Челябинск</option>
+                                    <option value="Уфа">Уфа</option>
+                                    <option value="Самара">Самара</option>
+                                    <option value="Ростов-на-Дону">Ростов-на-Дону</option>
+                                    <option value="Краснодар">Краснодар</option>
+                                    <option value="Омск">Омск</option>
+                                    <option value="Воронеж">Воронеж</option>
+                                    <option value="Пермь"> Пермь</option>
+                                    <option value="Волгоград">Волгоград</option>
+                                </select>
+                            </label>
                         </div>
                     </div>
 
@@ -878,7 +1073,8 @@
                             <span class="checkmark"></span>
                         </label>
                     </div>
-                    <button type="submit" class="btn btn-white">Оставить заявку</button>
+                    <button type="submit" data-val="modal-shipping" class="open_modal close-mod btn btn-white">Оставить заявку</button>
+
                 </div>
             </form>
 
@@ -886,10 +1082,95 @@
     </div>
 </div>
 
+<div id="modal-shipping" class="modal">
+    <div class="modal-content">
+        <div class="modal-form modal-manager-form">
+            <div class="close"></div>
+            <div class="manager-form-flex G-justify-between">
+                <div class="manager-form-title">
+                    <h3>Менеджер свяжется с Вами в течение 10 минут</h3>
+                    <p>Заполните дополнительные данные, чтобы заявка была обработана быстрее</p>
+                </div>
 
+                <div class="modal-timer G-center" data-time="10">10:00</div>
+
+            </div>
+            <form>
+                <div class="modal-shipping-flex G-justify-between G-align-start">
+                    <div class="shipping-method G-flex-column">
+                        <div class="shipping-method-name">
+                            <h5>Способ отгрузки</h5>
+                            <div class="shipping-method-radio G-align-center">
+                                <label class="form-radio">Ж/Д
+                                    <input type="radio" name="shipping">
+                                    <span class="radiobtn"></span>
+                                </label>
+                                <label class="form-radio">Авто
+                                    <input type="radio" name="shipping">
+                                    <span class="radiobtn"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="shipping-method-name">
+                            <h5>Доставка</h5>
+                            <div class="shipping-method-radio G-align-center">
+                                <label class="form-radio">Да
+                                    <input type="radio" name="delivery">
+                                    <span class="radiobtn"></span>
+                                </label>
+                                <label class="form-radio">Нет
+                                    <input type="radio" name="delivery">
+                                    <span class="radiobtn"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-shipping-sel G-flex-column">
+                        <div class="form-group">
+                            <p>Место отгрузки</p>
+                            <label class="form-select-label">
+                                <select>
+                                    <option value="">Выбрать</option>
+                                    <option value="Москва">Москва</option>
+                                    <option value="Санкт-Петербург">Санкт-Петербург</option>
+                                    <option value="Новосибирск">Новосибирск</option>
+                                    <option value="Екатеринбург">Екатеринбург</option>
+                                    <option value="Казань">Казань</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="delivery-select form-group">
+                            <p>Место поставки</p>
+                            <label class="form-select-label">
+                                <select>
+                                    <option value="">Регион поставки</option>
+                                    <option value="Москва">Москва</option>
+                                    <option value="Санкт-Петербург">Санкт-Петербург</option>
+                                    <option value="Новосибирск">Новосибирск</option>
+                                    <option value="Екатеринбург">Екатеринбург</option>
+                                    <option value="Казань">Казань</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="manager-form-btn G-justify-between G-align-center">
+                    <button class="go-back-btn close-mod"></button>
+                    <button class="btn btn-white">Далее</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
 
 
 <script src="assets/js/jquery-3.6.4.js"></script>
+<script src="assets/js/jquery.formstyler.min.js"></script>
 <script src="assets/js/swiper-bundle.min.js"></script>
 <script src="assets/js/map.js"></script>
 <script src="assets/js/script.js"></script>

@@ -29,10 +29,10 @@
 }
 .close{
     position: absolute;
-    top: 16px;
-    right: 16px;
-    width: 36px;
-    height: 36px;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
     z-index: 99;
     -webkit-transition: 0.3s;
@@ -60,12 +60,12 @@
     transition: 0.3s;
 }
 .close:before{
-    width: 24px;
+    width: 20px;
     height: 2px;
 }
 .close:after{
     width: 2px;
-    height: 24px;
+    height: 20px;
 }
 
 .modal-form{
@@ -123,8 +123,8 @@
     }
     .close {
         position: absolute;
-        top: 12px;
-        right: 12px;
+        top: 8px;
+        right: 8px;
         width: 24px;
         height: 24px;
     }
