@@ -73,14 +73,14 @@
                     <p>
                         Профессионал, который превратил локальный бизнес в федерального поставщика топлива
                     </p>
-                    <a href="#" class="btn btn-white G-center">Обсудить поставку</a>
+                    <button data-val="modal" class="open_modal btn btn-white">Обсудить поставку</button>
                 </div>
                 <div class="about-gen G-flex">
                     <img src="./assets/img/about-gen.webp" alt="gen">
                 </div>
             </div>
             <div class="discuss-delivery-mobile">
-                <a href="#" class="btn btn-white G-center">Обсудить поставку</a>
+                <button data-val="modal" class="open_modal btn btn-white">Обсудить поставку</button>
             </div>
             <div class="gas-industry-flex G-align-start G-justify-between">
                 <div class="gas-industry-info G-flex-column G-align-start">
@@ -210,7 +210,7 @@
                             <div class="swiper-slide">
                                 <div class="principles-box G-flex-column ">
                                     <div class="principles-icon G-center">
-                                        <img src="./assets/img/about-gen.png" alt="icons">
+                                        <img src="./assets/img/about-gen.webp" alt="icons">
                                     </div>
                                     <div class="principles-name">
                                         <h3>Ответственность</h3>
@@ -241,7 +241,8 @@
             <div class="changes-market-liner G-align-center G-justify-between">
                 <span>2010</span>
                 <div class="changes-liner G-flex">
-                    <img src="./assets/img/arrow-left-right.svg" alt="arrow">
+                    <img src="./assets/img/arrow-left-right.svg" class="changes-liner-desc" alt="arrow">
+                    <img src="./assets/img/left-right-mob.png" class="changes-liner-mob" alt="arrow">
                 </div>
                 <span>2025</span>
             </div>
@@ -363,7 +364,8 @@
                                 <span class="checkmark"></span>
                             </label>
                         </div>
-                        <button type="submit" class="btn btn-white">Отправить</button>
+                        <button type="submit" data-val="modal-manager" class="open_modal  btn btn-white">Отправить</button>
+
                     </div>
                     <div class="input-checkbox-desc">
                         <div class="input-checkbox">
@@ -501,7 +503,45 @@
 
 
 
+<div id="order-fuel" class="modal">
+    <div class="modal-content">
+        <div class="modal-form">
+            <div class="close"></div>
+            <div class="G-flex-column G-align-center">
+                <h2>Заказать топливо</h2>
+                <p>10 минут — и ваша заявка в работе</p>
+            </div>
+            <form>
+                <div class="modal-form-cnt G-flex-column">
+                    <div class="form-input">
+                        <label>
+                            <input type="text" placeholder="Ваше имя">
+                        </label>
+                    </div>
+                    <div class="form-input">
+                        <label>
+                            <input type="text" placeholder="Email">
+                        </label>
+                    </div>
+                    <div class="form-input">
+                        <label>
+                            <input type="text" placeholder="+ 7 999 999 99 99">
+                        </label>
+                    </div>
+                    <div class="input-checkbox">
+                        <label>
+                            <small>Я даю своё согласие на <a href="#">обработу персональных данных</a></small>
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <button type="submit" data-val="modal-manager" class=" open_modal close-mod btn btn-white">Оставить заявку</button>
+                </div>
+            </form>
 
+        </div>
+    </div>
+</div>
 
 
 <div id="modal-manager" class="modal">

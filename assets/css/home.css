@@ -1271,10 +1271,10 @@ p{
 .num-ton{
     position: absolute;
     left: 46px;
-    top: 13px;
+    top: 14px;
     font-weight: 400;
     font-size: 20px;
-    line-height: 26px;
+    line-height: 24px;
     color: #4A4D4D;
 }
 .form-input-active .num-ton{
@@ -1472,6 +1472,12 @@ p{
         right: 16px;
         width: 8px;
         height: 8px;
+    }
+    .num-ton {
+        left: 42px;
+        top: 14px;
+        font-size: 16px;
+        line-height: 21px;
     }
 }
 

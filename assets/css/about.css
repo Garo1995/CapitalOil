@@ -218,7 +218,9 @@
     display: none;
 }
 
-
+.changes-liner-mob{
+    display: none;
+}
 
 
 
@@ -378,4 +380,14 @@
     .page-about .wholesale-fuel-fon {
         padding: 100px 0 14px;
     }
+}
+
+@media (max-width: 570px){
+    .changes-liner-mob{
+        display: block;
+    }
+    .changes-liner-desc{
+        display: none;
+    }
+
 }

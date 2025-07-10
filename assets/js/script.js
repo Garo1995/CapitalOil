@@ -141,6 +141,11 @@ $('.open_modal').on('click', function (e) {
     $('body').css({overflow: 'hidden'});
     modal.fadeIn();
 
+
+    currentStep = 0;
+    showStep(currentStep);
+
+
     // Таймер (если есть)
     const timerEl = modal.find('.modal-timer')[0];
     if (timerEl) {
@@ -253,27 +258,20 @@ document.querySelectorAll(".custom-selects").forEach((select) => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const shippingRadios = document.querySelectorAll('input[name="shipping"]');
     const deliveryRadios = document.querySelectorAll('input[name="delivery"]');
     const targetBlock = document.querySelector('.modal-shipping-sel');
 
     function checkConditions() {
-        const shippingSelected = document.querySelector('input[name="shipping"]:checked');
         const deliverySelected = document.querySelector('input[name="delivery"]:checked');
 
-        const shippingValue = shippingSelected?.closest('label')?.textContent.trim();
         const deliveryValue = deliverySelected?.closest('label')?.textContent.trim();
 
-        if (shippingValue === 'Ж/Д' && deliveryValue === 'Да') {
+        if (deliveryValue === 'Да') {
             targetBlock.classList.add('active'); // добавляем нужный класс
         } else {
             targetBlock.classList.remove('active'); // удаляем, если условия не совпали
         }
     }
-
-    shippingRadios.forEach(radio => {
-        radio.addEventListener('change', checkConditions);
-    });
 
     deliveryRadios.forEach(radio => {
         radio.addEventListener('change', checkConditions);
@@ -372,46 +370,43 @@ $('.form-input').on('click', function () {
 })
 
 
+let currentStep = 0;
 
-document.addEventListener("DOMContentLoaded", function () {
+function showStep(index) {
     const steps = document.querySelectorAll(".quiz-one, .quiz-two, .quiz-three, .quiz-four");
     const nextBtn = document.querySelector(".btn-next");
     const prevBtn = document.querySelector(".btn-prev");
 
-    let currentStep = 0;
+    steps.forEach((step, i) => {
+        step.style.display = i === index ? "block" : "none";
+    });
 
-    function showStep(index) {
-        steps.forEach((step, i) => {
-            step.style.display = i === index ? "block" : "none";
-        });
-
-        // Управляем видимостью кнопки "назад"
-        if (prevBtn) {
-            prevBtn.style.display = index === 0 ? "none" : "inline-block";
-        }
-
-        // Можно также скрыть "Далее" на последнем шаге
-        if (nextBtn) {
-            nextBtn.textContent = index === steps.length - 1 ? "Отправить" : "Далее";
-        }
+    if (prevBtn) {
+        prevBtn.style.display = index === 0 ? "none" : "inline-block";
     }
 
-    // Показать первый шаг при загрузке
+    if (nextBtn) {
+        nextBtn.textContent = index === steps.length - 1 ? "Отправить" : "Далее";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const nextBtn = document.querySelector(".btn-next");
+    const prevBtn = document.querySelector(".btn-prev");
+
     showStep(currentStep);
 
-    // Обработчик на кнопку "Далее"
     nextBtn.addEventListener("click", function (e) {
         e.preventDefault();
+        const steps = document.querySelectorAll(".quiz-one, .quiz-two, .quiz-three, .quiz-four");
         if (currentStep < steps.length - 1) {
             currentStep++;
             showStep(currentStep);
         } else {
-            // Последний шаг — отправка формы
             document.querySelector("form").submit();
         }
     });
 
-    // Обработчик на кнопку "Назад"
     prevBtn.addEventListener("click", function (e) {
         e.preventDefault();
         if (currentStep > 0) {
@@ -420,8 +415,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-
 
 
 
